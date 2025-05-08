@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Learn Mi'gmaq</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    /* sidebar styling */
+    #sidebar {
+      padding: 1rem;
+    }
+
+    /* hide all sub-menus */
+    #sidebar .menu-list ul {
+      display: none;
+      margin-left: 1rem;
+    }
+
+    /* show when <li> has .is-open */
+    #sidebar li.is-open>ul {
+      display: block;
+    }
+
+    /* mark items that have children */
+    #sidebar li.has-children>a {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    /* insert the ▶ before the text, with a bit of space */
+    #sidebar li.has-children>a::before {
+      content: "❯";
+      margin-right: 0.5em;
+      transition: transform 0.2s ease;
+    }
+
+    /* rotate it when open */
+    #sidebar li.is-open>a::before {
+      transform: rotate(90deg);
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar is-light">
+    <div class="navbar-brand">
+      <span class="navbar-item">
+        <img src="./sitelogo.png" alt="logo" style="max-height:3rem;">
+        <strong>Learn Mi'gmaq Online</strong>
+      </span>
+    </div>
+    <div class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="buttons">
+            <a class="button is-light">Log In</a>
+            <a class="button is-primary">Register</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <section class="section">
+    <div class="columns">
+      <!-- Sidebar -->
+      <aside class="column is-3">
+        <nav class="menu" id="sidebar">
+          <p class="menu-label">Mi'kmaq Language Lessons</p>
+          <ul class="menu-list">
+            <li>
+              <a>Greetings and Introductions</a>
+              <ul>
+                <li>
+                  <a>Unit 1: Basic Greetings</a>
+                  <ul>
+                    <li><a>Lesson 1: Saying Hello</a></li>
+                    <li><a>Lesson 2: Asking “How are you?”</a></li>
+                    <li><a>Lesson 3: Introducing Yourself</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a>Unit 2: Basic Farewells</a>
+                  <ul>
+                    <li><a>Lesson 1: Saying Goodbye</a></li>
+                    <li><a>Lesson 2: “See You Tomorrow”</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a>Animals, Food, Household</a>
+              <ul>
+                <li>
+                  <a>Unit 3: Animals</a>
+                  <ul>
+                    <li><a>Lesson 1: Common Mammals</a></li>
+                    <li><a>Lesson 2: Common Birds</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a>Unit 4: Food & Household</a>
+                  <ul>
+                    <li><a>Lesson 1: Kitchen Vocabulary</a></li>
+                    <li><a>Lesson 2: Dining Terms</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="column is-9">
+        <section class="section">
+          <h1 class="title">Pronunciation</h1>
+
+          <div class="content">
+            <p>
+              Many of the sounds in Mi'gmaq are just like the sounds in English, so we won't spend a lot of time looking
+              at them on their own.
+            </p>
+            <p>
+              This lesson isn't about learning new vocabulary, so don't worry if you can't remember these words later.
+              We're picking up the sounds of the language before the meaning, just like babies do.
+            </p>
+
+            <h2 class="subtitle">Vowels</h2>
+            <ul>
+              <li><strong>u</strong> — as in <em>food</em></li>
+              <li><strong>e</strong> — as in Canadian <em>eh</em></li>
+              <li><strong>i</strong> — as in <em>fee</em></li>
+              <li><strong>o</strong> — as in <em>snow</em></li>
+              <li><strong>a</strong> — as in <em>father</em></li>
+              <li><strong>'</strong> — a special vowel, pronounced like <em>uh</em> in <em>potato</em></li>
+            </ul>
+
+            <p>
+              Vowels mostly sound like their English equivalents. However, there is one sound in Mi'gmaq that doesn't
+              exist in English: the Mi'gmaq sound <strong>q</strong>.
+            </p>
+
+            <p>
+              Here are some words with <strong>q</strong>. Practice saying them to yourself until you feel comfortable
+              with the sound. It's a guttural sound that you make in the back of your throat.
+            </p>
+            <p><em>Don't worry if you don't say it perfectly! As you speak more Mi'gmaq, the sound will come more and
+                more easily.</em></p>
+          </div>
+
+          <hr>
+
+          <h2 class="subtitle">Vocabulary Section 1</h2>
+
+          <div class="box">
+            <div class="columns is-multiline">
+
+              <div class="column is-6">
+                <p>
+                  <strong>goqwei</strong>
+                  <button class="ml-2 is-rounded button is-small is-light"
+                    onclick="document.getElementById('audio-goqwei').play()">
+                    <span class="icon is-small"><i class="fas fa-volume-up"></i></span>
+                  </button><br>
+                  <small>what</small>
+                  <audio id="audio-goqwei" src="audio/goqwei.mp3"></audio>
+                </p>
+              </div>
+
+              <div class="column is-6">
+                <p>
+                  <strong>aloqoman</strong>
+                  <button class="ml-2 is-rounded button is-small is-light"
+                    onclick="document.getElementById('audio-aloqoman').play()">
+                    <span class="icon is-small"><i class="fas fa-volume-up"></i></span>
+                  </button><br>
+                  <small>grape</small>
+                  <audio id="audio-aloqoman" src="audio/aloqoman.mp3"></audio>
+                </p>
+              </div>
+
+              <div class="column is-6">
+                <p>
+                  <strong>petaqan</strong>
+                  <button class="ml-2 is-rounded button is-small is-light"
+                    onclick="document.getElementById('audio-petaqan').play()">
+                    <span class="icon is-small"><i class="fas fa-volume-up"></i></span>
+                  </button><br>
+                  <small>pie</small>
+                  <audio id="audio-petaqan" src="audio/petaqan.mp3"></audio>
+                </p>
+              </div>
+
+              <div class="column is-6">
+                <p>
+                  <strong>pipnaqan</strong>
+                  <button class="ml-2 is-rounded button is-small is-light"
+                    onclick="document.getElementById('audio-pipnaqan').play()">
+                    <span class="icon is-small"><i class="fas fa-volume-up"></i></span>
+                  </button><br>
+                  <small>bread</small>
+                  <audio id="audio-pipnaqan" src="audio/pipnaqan.mp3"></audio>
+                </p>
+              </div>
+
+            </div>
+          </div>
+
+
+          <nav class="level">
+            <div class="level-left">
+              <a class="button is-light is-small">&larr; Previous Vocabulary</a>
+            </div>
+            <div class="level-right">
+              <a class="button is-primary is-small">Next Vocabulary &rarr;</a>
+            </div>
+          </nav>
+        </section>
+      </main>
+
+    </div>
+  </section>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const sidebar = document.getElementById('sidebar');
+
+      // First, mark every <li> that has a nested <ul>:
+      sidebar.querySelectorAll('li').forEach(li => {
+        if (li.querySelector('ul')) {
+          li.classList.add('has-children');
+        }
+      });
+
+      // Delegate clicks to toggle open/closed state:
+      sidebar.addEventListener('click', e => {
+        const link = e.target.closest('a');
+        if (!link) return;
+        const submenu = link.nextElementSibling;
+        if (submenu && submenu.tagName === 'UL') {
+          e.preventDefault();
+          link.parentElement.classList.toggle('is-open');
+        }
+      });
+    });
+  </script>
+  <footer class="footer has-background-light">
+    <div class="has-text-centered content">
+      <p>
+        <strong>Learn Mi'gmaq Online</strong> by <a href="#">Your Name or Organization</a>.<br>
+        This site is dedicated to helping learners explore and preserve the Mi'gmaq language.
+      </p>
+      <p>
+        <a href="#">Privacy</a> · <a href="#">Terms</a> · <a href="#">Contact</a>
+      </p>
+    </div>
+  </footer>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const sidebar = document.getElementById('sidebar');
+
+      // Only open top-level <li> items (those directly under #sidebar .menu-list)
+      sidebar.querySelectorAll('.menu-list > li').forEach(li => {
+        if (li.querySelector('ul')) {
+          li.classList.add('has-children', 'is-open'); // open top-level
+        }
+      });
+
+      // For all other nested <li> with children, add only has-children
+      sidebar.querySelectorAll('.menu-list li li').forEach(li => {
+        if (li.querySelector('ul')) {
+          li.classList.add('has-children'); // collapsed by default
+        }
+      });
+
+      // Toggle submenu on click
+      sidebar.addEventListener('click', e => {
+        const link = e.target.closest('a');
+        if (!link) return;
+        const submenu = link.nextElementSibling;
+        if (submenu && submenu.tagName === 'UL') {
+          e.preventDefault();
+          link.parentElement.classList.toggle('is-open');
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>
