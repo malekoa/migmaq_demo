@@ -260,36 +260,6 @@
       </p>
     </div>
   </footer>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const sidebar = document.getElementById('sidebar');
-
-      // Only open top-level <li> items (those directly under #sidebar .menu-list)
-      sidebar.querySelectorAll('.menu-list > li').forEach(li => {
-        if (li.querySelector('ul')) {
-          li.classList.add('has-children', 'is-open'); // open top-level
-        }
-      });
-
-      // For all other nested <li> with children, add only has-children
-      sidebar.querySelectorAll('.menu-list li li').forEach(li => {
-        if (li.querySelector('ul')) {
-          li.classList.add('has-children'); // collapsed by default
-        }
-      });
-
-      // Toggle submenu on click
-      sidebar.addEventListener('click', e => {
-        const link = e.target.closest('a');
-        if (!link) return;
-        const submenu = link.nextElementSibling;
-        if (submenu && submenu.tagName === 'UL') {
-          e.preventDefault();
-          link.parentElement.classList.toggle('is-open');
-        }
-      });
-    });
-  </script>
 </body>
 
 </html>
